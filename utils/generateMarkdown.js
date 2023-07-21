@@ -11,10 +11,12 @@ function renderLicenseLink(license) {}
 function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
-// function generateMarkdown(data) {
-//   return `# ${data.title}
-// // inject content using the object keys, can use markdown language
-// `;
-// }
+function generateMarkdown(data) {
+  return `# ${data.apptitle}
+            ${data.license}
+            etc etc
+// inject content using the object keys, can use markdown language
+`;
+}
 
 module.exports = generateMarkdown;
