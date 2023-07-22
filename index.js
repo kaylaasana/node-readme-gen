@@ -1,12 +1,8 @@
-// TODO: Include packages needed for this application
-
+// adding packages
 const { default: inquirer } = require('inquirer');
-// add a package that will import generate file
-// export 'require' from a file const bad math = require('./badmath.js');
-// use your own word to name the variable (not matching badmath)
-// node.js will be executed
 
 const generateMarkdown = require('./utils/generateMarkdown')
+
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -62,19 +58,12 @@ const questions = [
 function init() { 
 // ask the user questions
     inquirer
-    .prompt([
-        // pass your questions here
-        
-    ])
+    .prompt(questions)
     // we need to save the answers, maybe as a one object
     .then((answers) => {
         console.log(answers)
-
-        // use user feedback for...
-        // create the content from the responses, combine them into big string, 
-        // call generateMarkdown(answers) function (call it), pass in the perimeter keys
-        let markDown = generateMarkdown(answers)
-        // call writeToFile()
+        let markDown = generateMarkdown(answers)        
+        writeToFile('generate fileName', markDown)
     }).catch((error) => {
         console.log(error);
     });
@@ -82,7 +71,7 @@ function init() {
 }
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
+function writeToFile(fileName, answers) {
     // create readme
 }
 

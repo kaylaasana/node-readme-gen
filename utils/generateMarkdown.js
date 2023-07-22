@@ -1,5 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// render license badges
 function renderLicenseBadge(license) {
   if(license === 'Apache2.0'){
     return '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
@@ -12,24 +11,54 @@ function renderLicenseBadge(license) {
   }else if(license === 'IBM'){
     return '[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)'
   }else if(license === 'none'){
+    // If there is no license, return an empty string
     return ''
   }
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
+// // TODO: Create a function that returns the license link
+// // If there is no license, return an empty string
+// function renderLicenseLink(license) {}
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
+// // TODO: Create a function that returns the license section of README
+// // If there is no license, return an empty string
+// function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.projTitle}
-            ${data.license}
-            etc etc
-// inject content using the object keys, can use markdown language
+function generateMarkdown(answers) {
+  return `# ${answers.projTitle}  
+
+  ## Table of Contents
+
+  * [License](#license)
+  * [Description](#description)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Contributions](#contributions)
+  * [Contact](#contact)
+   
+   ## License:
+   ${answers.license}
+
+   ## Description
+   ${answers.description}
+   
+   ## Installation
+   ${answers.installInst}
+            
+   ## Usage
+   ${answers.usage}
+   
+   ## Contributions
+   ${answers.contributions}
+   
+   ## Testing
+   ${answers.testing}
+
+   ## Contact
+   Github: https://github.com/${answers.userName}
+   E-mail: ${answers.email}
+
 `;
 }
 
