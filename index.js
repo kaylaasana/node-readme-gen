@@ -1,9 +1,10 @@
 // adding packages
-const { default: inquirer } = require('inquirer');
+const inquirer = require('inquirer');
+const fs = require('fs')
 
 const generateMarkdown = require('./utils/generateMarkdown')
 
-// TODO: Create an array of questions for user input
+// question prompts the user will see
 const questions = [
     {
         type: 'input',
@@ -54,7 +55,7 @@ const questions = [
     }
 ];
 
-// TODO: Create a function to initialize app
+// initialize app
 function init() { 
 // ask the user questions
     inquirer
@@ -70,14 +71,13 @@ function init() {
 
 }
 
-// TODO: Create a function to write README file
+// write README file
 function writeToFile(fileName, answers) {
-    // create readme
+    fs.writeFile(fileName, answers, (err) => 
+    err ? console.error(err) : console.log('yay!'))
 }
 
 
 
 // Function call to initialize app
 init();
-
-// create a variable ex: result = init();
