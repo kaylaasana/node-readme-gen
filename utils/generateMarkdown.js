@@ -1,15 +1,15 @@
 // render license badges
 function renderLicenseBadge(license) {
   if(license === 'Apache2.0'){
-    return '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
+    return '(https://img.shields.io/badge/License-Apache_2.0-blue.svg)'
   }else if(license === 'BSD 3'){
-    return '[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)'
+    return '[![License: BSD 3](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)]'
   }else if(license === 'MIT'){
-    return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+    return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]'
   }else if(license === 'GPL v3'){
-    return '[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)'
+    return '[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)]'
   }else if(license === 'IBM'){
-    return '[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)'
+    return '[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)]'
   }else if(license === 'none'){
     // If there is no license, return an empty string
     return ''
@@ -19,7 +19,7 @@ function renderLicenseBadge(license) {
 // generate markdown for README
 function generateMarkdown(answers) {
   return `# ${answers.projTitle}  
-
+  
   ## Table of Contents
 
   * [License](#license)
@@ -30,7 +30,7 @@ function generateMarkdown(answers) {
   * [Contact](#contact)
    
    ## License:
-   ${answers.license}
+   ![${answers.license}]${renderLicenseBadge(answers.license)}
 
    ## Description
    ${answers.description}
@@ -48,8 +48,9 @@ function generateMarkdown(answers) {
    ${answers.testing}
 
    ## Contact
-   Github: https://github.com/${answers.userName}
-   E-mail: ${answers.email}
+   * Github: https://github.com/${answers.userName}
+   * E-mail: ${answers.email}
+
 
 `;
 }
