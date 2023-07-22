@@ -62,9 +62,9 @@ function init() {
     .prompt(questions)
     // we need to save the answers, maybe as a one object
     .then((answers) => {
-        console.log(answers)
+        // console.log(answers)
         let markDown = generateMarkdown(answers)        
-        writeToFile('fileName', markDown)
+        writeToFile('./Generated-README/README.md', markDown)
     }).catch((error) => {
         console.log(error);
     });

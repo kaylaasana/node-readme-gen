@@ -3,13 +3,13 @@ function renderLicenseBadge(license) {
   if(license === 'Apache2.0'){
     return '(https://img.shields.io/badge/License-Apache_2.0-blue.svg)'
   }else if(license === 'BSD 3'){
-    return '[![License: BSD 3](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)]'
+    return '(https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)'
   }else if(license === 'MIT'){
-    return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]'
+    return '(https://img.shields.io/badge/License-MIT-yellow.svg)'
   }else if(license === 'GPL v3'){
-    return '[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)]'
+    return '(https://img.shields.io/badge/License-AGPL_v3-blue.svg)'
   }else if(license === 'IBM'){
-    return '[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)]'
+    return '(https://img.shields.io/badge/License-IPL_1.0-blue.svg)'
   }else if(license === 'none'){
     // If there is no license, return an empty string
     return ''
@@ -36,6 +36,7 @@ function generateMarkdown(answers) {
    ${answers.description}
    
    ## Installation
+   
    ${answers.installInst}
             
    ## Usage
