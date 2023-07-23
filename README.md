@@ -9,5 +9,5 @@ Please refer to the provided video for instructions on using this application. W
 ## Contact
 
 For any questions, please contact me via the channels below:
-Github: https://github.com/kaylaasana
-E-mail: kayladatte@gmail.com
+* Github: https://github.com/kaylaasana
+* E-mail: kayladatte@gmail.com
