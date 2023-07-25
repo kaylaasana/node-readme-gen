@@ -45,7 +45,7 @@ function generateMarkdown(answers) {
   * [Installation](#installation)
   * [Usage](#usage)
   * [Contributions](#contributions)
-  * [Contact](#contact)
+  * [Questions](#questions)
    
    ## License:
    ${renderLicenseDescription(answers.license)}
@@ -66,7 +66,7 @@ function generateMarkdown(answers) {
    ## Testing
    ${answers.testing}
 
-   ## Contact
+   ## Questions
    If you have any questions regarding this application, please contact me via the channels below
    * Github: https://github.com/${answers.userName}
    * E-mail: ${answers.email}
