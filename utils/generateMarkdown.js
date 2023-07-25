@@ -16,10 +16,28 @@ function renderLicenseBadge(license) {
   }
 }
 
+function renderLicenseDescription(license){
+  if(license === 'Apache2.0'){
+    return 'This project is covered under the Apache 2.0 license criteria'
+  }else if(license === 'BSD 3'){
+    return 'This project is covered under the BSD 3 license criteria'
+  }else if(license === 'MIT'){
+    return 'This project is covered under the MIT license criteria'
+  }else if(license === 'GPL v3'){
+    return 'This project is covered under the GPL v3 license criteria'
+  }else if(license === 'IBM'){
+    return 'This project is covered under the IBM license criteria'
+  }else if(license === 'none'){
+    // If there is no license, return an empty string
+    return 'No license'
+  }
+}
+
 // generate markdown for README
 function generateMarkdown(answers) {
   return `# ${answers.projTitle}  
-  
+  ![${answers.license}]${renderLicenseBadge(answers.license)}
+
   ## Table of Contents
 
   * [License](#license)
@@ -30,7 +48,7 @@ function generateMarkdown(answers) {
   * [Contact](#contact)
    
    ## License:
-   ![${answers.license}]${renderLicenseBadge(answers.license)}
+   ${renderLicenseDescription(answers.license)}
 
    ## Description
    ${answers.description}
