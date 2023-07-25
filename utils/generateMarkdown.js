@@ -67,6 +67,7 @@ function generateMarkdown(answers) {
    ${answers.testing}
 
    ## Contact
+   If you have any questions regarding this application, please contact me via the channels below
    * Github: https://github.com/${answers.userName}
    * E-mail: ${answers.email}
 
