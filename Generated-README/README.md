@@ -8,7 +8,7 @@
   * [Installation](#installation)
   * [Usage](#usage)
   * [Contributions](#contributions)
-  * [Contact](#contact)
+  * [Questions](#questions)
    
    ## License:
    This project is covered under the Apache 2.0 license criteria
@@ -29,7 +29,8 @@
    ## Testing
    test
 
-   ## Contact
+   ## Questions
+   If you have any questions regarding this application, please contact me via the channels below
    * Github: https://github.com/test
    * E-mail: test
 
